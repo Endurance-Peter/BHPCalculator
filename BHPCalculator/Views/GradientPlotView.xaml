@@ -37,10 +37,10 @@
                     </Grid>
                     <StackPanel Grid.Row="0" Grid.Column="1"
                         Margin="10" VerticalAlignment="Center">
-                        <TextBlock Text="Slope:"/>
-                        <TextBox Width="100"/>
+                        <TextBlock Text="Slope:" />
+                        <TextBox Width="100" Style="{StaticResource CustomTextBoxStyle}"/>
                         <TextBlock Text="Gradient:" Margin="0,10,0,0"/>
-                        <TextBox Width="100"/>
+                        <TextBox Width="100" Style="{StaticResource CustomTextBoxStyle}"/>
                         <Button Content="Calculate" Margin="0,30, 0 10"/>
                         <Button Content="Export"/>
                     </StackPanel>
@@ -48,9 +48,9 @@
                 </Grid>
                 <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="10">
                     <TextBlock Text="X:" Margin="10,0"/>
-                    <TextBox Width="100"/>
+                    <TextBox Width="100" Style="{StaticResource CustomTextBoxStyle}"/>
                     <TextBlock Text="Y:" Margin="10,0"/>
-                    <TextBox Width="100"/>
+                    <TextBox Width="100" Style="{StaticResource CustomTextBoxStyle}"/>
                 </StackPanel>
             </StackPanel>
             
