@@ -14,11 +14,11 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
-        <Border Style="{StaticResource CustomViewStyle}" Background="Pink">
+        <Border Style="{StaticResource CustomViewStyle}" Background="#f3caca">
             <StackPanel>
                 <TextBlock 
                 Text="Well and Reservoir Properties"
-                Background="HotPink"
+                Background="#621717"
                 TextAlignment="Center"
                 Foreground="White"
                 Padding="5"/>

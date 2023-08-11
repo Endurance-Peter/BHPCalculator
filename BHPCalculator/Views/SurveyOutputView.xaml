@@ -15,11 +15,11 @@
     </UserControl.Resources>
 
     <Grid>
-        <Border Style="{StaticResource CustomViewStyle}"  Background="Pink">
+        <Border Style="{StaticResource CustomViewStyle}"  Background="#f3caca">
             <StackPanel>
                 <TextBlock 
                 Text="Survey Output"
-                Background="HotPink"
+                Background="#621717"
                 TextAlignment="Center"
                 Foreground="White"
                 Padding="5"/>
@@ -42,7 +42,7 @@
                     <TextBlock Text="Stop Depth to Top of Perf. (ftss):" Grid.Column="0" Grid.Row="0" Style="{StaticResource CustomTextBlockStyle}"/>
                     <TextBlock Text="Change in Pressure (psi):" Grid.Column="0" Grid.Row="1" Style="{StaticResource CustomTextBlockStyle}"/>
                     <TextBlock Text="Pressure at top of Perf. (psia):" Grid.Column="0" Grid.Row="2" Style="{StaticResource CustomTextBlockStyle}"/>
-                    <Border Grid.Row="3" Grid.ColumnSpan="2" Height="5" Margin="0, 10" Background="HotPink"/>
+                    <Border Grid.Row="3" Grid.ColumnSpan="2" Height="5" Margin="0, 10" Background="#621717"/>
                     <TextBlock Text="Top of Perf. to Datum Depth (ftss):" Grid.Column="0" Grid.Row="4" Style="{StaticResource CustomTextBlockStyle}"/>
                     <TextBlock Text="Change in Pressure (psi)" Grid.Column="0" Grid.Row="5" Style="{StaticResource CustomTextBlockStyle}"/>
                     <TextBlock Text="Pressure at Datum (psia)" Grid.Column="0" Grid.Row="6" Style="{StaticResource CustomTextBlockStyle}"/>

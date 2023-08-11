@@ -6,18 +6,75 @@
         xmlns:local="clr-namespace:BHPCalculator"
         xmlns:views="clr-namespace:BHPCalculator.Views"
         mc:Ignorable="d"
-        Title="BHP Calculator" HorizontalAlignment="Center" MinHeight="720" MinWidth="1000" Background="DimGray">
+        Title="BHP Calculator" WindowStyle="None" MinHeight="720" MinWidth="1000" Background="#13111d">
+    <Window.Resources>
+        <Style x:Key="TitleButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Width" Value="30" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="DarkGray" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+        <Grid MouseLeftButtonDown="TitlePane_MouseLeftButtonDown"
+              MouseMove="TitlePane_MouseMove"
+              MouseLeftButtonUp="TitlePane_MouseLeftButtonUp">
+            <!-- Custom Title Pane -->
+            <Grid Background="#621717" Height="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
+                <!-- Title Text -->
+                <TextBlock Text="BOTTOM HOLE PRESSURE CALCULATOR" Foreground="White" FontFamily="Segoe UI"
+                           VerticalAlignment="Center" FontWeight="SemiBold"
+                           HorizontalAlignment="Center"/>
 
-        <Grid  Background="WhiteSmoke">
+                <!-- Minimize Button -->
+                <Button Content="-" Grid.Column="1" Style="{StaticResource TitleButtonStyle}"
+                        VerticalAlignment="Center" Click="MinimizeButton_Click"/>
+
+                <!-- Maximize/Restore Button -->
+                <Button x:Name="retoreBtn" Content="◻&#x25A1;" Grid.Column="2" Style="{StaticResource TitleButtonStyle}"
+                        VerticalAlignment="Center" Click="MaximizeRestoreButton_Click"/>
+
+                <!-- Close Button -->
+                <Button Content="x" Grid.Column="3" Style="{StaticResource TitleButtonStyle}"
+                        VerticalAlignment="Center" Click="CloseButton_Click"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1" Background="WhiteSmoke">
             <views:TopPaneView/>
         </Grid>
-        <Grid Grid.Row="1" Margin="50,0">
+        <Grid Grid.Row="2" Margin="50,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -36,7 +93,7 @@
             <views:SurveyOutput Grid.Row="1" Grid.Column="1" Margin="0,0,0,10"/>
             <views:DataTableView Grid.Row="2" Margin="0,0,15,10"/>
             <views:GradientPlotView Grid.Row="2" Grid.Column="1" Margin="0,0,0,10"/>
-            <TextBlock Grid.Row="3" Foreground="Black">
+            <TextBlock Grid.Row="3" Foreground="Gray">
                 &#xA9; Cyphercrescent 2023 <LineBreak/>
                 BHP Calculator
             </TextBlock>

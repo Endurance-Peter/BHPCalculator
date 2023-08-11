@@ -4,10 +4,10 @@
         <Setter Property="Margin" Value="0" />
         <Setter Property="Padding" Value="2" />
         <Setter Property="CornerRadius" Value="5" />
-        <Setter Property="Background" Value="White" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="Effect">
             <Setter.Value>
-                <DropShadowEffect Color="Gray" ShadowDepth="10" Opacity="0.8" />
+                <DropShadowEffect Color="#13111d" ShadowDepth="15" Opacity="0.8" />
             </Setter.Value>
         </Setter>
     </Style>
@@ -22,6 +22,7 @@
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
         <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Right" />
         <Setter Property="FontFamily" Value="Segoe UI" />
         <Setter Property="Template">
             <Setter.Value>
@@ -37,7 +38,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsKeyboardFocusWithin" Value="True">
-                <Setter Property="BorderBrush" Value="HotPink"/>
+                <Setter Property="BorderBrush" Value="#621717"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -86,7 +87,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="DataGridCell.IsSelected" Value="True">
-                <Setter Property="Background" Value="#4197d9" />
+                <Setter Property="Background" Value="#621717" />
                 <Setter Property="BorderBrush" Value="Transparent"/>
                 <Setter Property="Height" Value="30"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>

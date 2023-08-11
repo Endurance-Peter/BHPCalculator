@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
-        <Border Style="{StaticResource CustomViewStyle}" Background="Pink">
+        <Border Style="{StaticResource CustomViewStyle}" Background="#f3caca">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Text="Survey Type:" Margin="0, 0 , 10,0" Style="{StaticResource CustomTextBlockStyle}"/>
                 <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>

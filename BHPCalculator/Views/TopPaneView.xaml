@@ -6,20 +6,27 @@
              xmlns:local="clr-namespace:BHPCalculator.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
-            <TextBlock Text="Pressure:" VerticalAlignment="Center" Margin="10,0"/>
-            <Border BorderThickness="1" BorderBrush="Pink" 
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="#d9d9d9">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5">
+            <TextBlock Text="Pressure:" VerticalAlignment="Center" Margin="10,0" Style="{StaticResource CustomTextBlockStyle}"/>
+            <Border BorderThickness="1" BorderBrush="#621717" 
                     Margin="0,0,40,0"
                     Padding="5" Width="80" CornerRadius="5">
-                <TextBlock  Text="Psia" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock  Text="Psia" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomTextBlockStyle}"/>
             </Border>
 
-            <TextBlock Text="Depth:" VerticalAlignment="Center" Margin="10,0"/>
-            <Border BorderThickness="1" BorderBrush="Pink" 
+            <TextBlock Text="Depth:" VerticalAlignment="Center" Margin="10,0" Style="{StaticResource CustomTextBlockStyle}"/>
+            <Border BorderThickness="1" BorderBrush="#621717" 
                     Margin="0,0,100,0"
                     Padding="5" Width="80" CornerRadius="5">
-                <TextBlock  Text="ft" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <TextBlock  Text="ft" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource CustomTextBlockStyle}"/>
             </Border>
 
         </StackPanel>

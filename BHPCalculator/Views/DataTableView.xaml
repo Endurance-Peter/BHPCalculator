@@ -15,11 +15,11 @@
     </UserControl.Resources>
     
     <Grid>
-        <Border Style="{StaticResource CustomViewStyle}"  Background="Pink">
+        <Border Style="{StaticResource CustomViewStyle}"  Background="#f3caca">
             <StackPanel>
                 <TextBlock 
                 Text="Data Table"
-                Background="HotPink"
+                Background="#621717"
                 TextAlignment="Center"
                 Foreground="White"
                 Padding="5"/>
