@@ -14,13 +14,16 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Survey Type:" Margin="0, 0 , 10,0"/>
-            <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>
-            <TextBlock Text="Date of Survey:" Margin="20, 0 , 10,0"/>
-            <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>
-            <TextBlock Text="Date of Last Survey:" Margin="20, 0 , 10,0"/>
-            <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>
-        </StackPanel>
+        <Border Style="{StaticResource CustomViewStyle}" Background="Pink">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Survey Type:" Margin="0, 0 , 10,0" Style="{StaticResource CustomTextBlockStyle}"/>
+                <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>
+                <TextBlock Text="Date of Survey:" Margin="20, 0 , 10,0" Style="{StaticResource CustomTextBlockStyle}"/>
+                <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>
+                <TextBlock Text="Date of Last Survey:" Margin="20, 0 , 10,0" Style="{StaticResource CustomTextBlockStyle}"/>
+                <TextBox Width="150" Style="{StaticResource CustomTextBoxStyle}"/>
+            </StackPanel>
+        </Border>
+        
     </Grid>
 </UserControl>

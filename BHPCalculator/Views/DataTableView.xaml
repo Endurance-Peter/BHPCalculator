@@ -29,7 +29,7 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Station"
                                     Binding="{Binding Path=Station}"
-                                    Width="60"
+                                    Width="*"
                                     >
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
@@ -40,7 +40,7 @@
                             </DataGridTextColumn>
                             <DataGridTextColumn Header="Depth (ftMD)"
                                     Binding="{Binding Path=DepthValues}"
-                                    Width="auto"
+                                    Width="*"
                                     >
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
@@ -50,7 +50,7 @@
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
                             <DataGridTextColumn Header="Depth (ftss)"
-                                    Width="0.5*"
+                                    Width="*"
                                     Binding="{Binding Path=DepthValues}">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
@@ -60,7 +60,7 @@
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
                             <DataGridTextColumn Header="Pressure (psia)"
-                                    Width="0.5*"
+                                    Width="*"
                                     Binding="{Binding Path=PressureValue}">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
@@ -70,7 +70,7 @@
                                 </DataGridTextColumn.ElementStyle>
                             </DataGridTextColumn>
                             <DataGridTextColumn Header="Gradient (psi/ft)"
-                                    Width="0.5*"
+                                    Width="*"
                                     Binding="{Binding Path=GradientValue}">
                                 <DataGridTextColumn.ElementStyle>
                                     <Style TargetType="TextBlock">
